@@ -105,7 +105,7 @@ func (e *Escpos) End() {
 
 // send cut
 func (e *Escpos) Cut() {
-	e.Write("\x1DVA0")
+	e.WriteRaw([]byte{29, 86, 49})
 }
 
 // send cash
